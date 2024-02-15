@@ -24,3 +24,7 @@
 - Advance: Decorators, Generators, Iterators, MetaProgramming
 
 * Getting help use 'dir()' method
+
+
+## Data types mutable & immutable
+- Checkout this blog ([Blog](https://strngeblogs.hashnode.dev/understanding-mutable-and-immutable-objects-in-python))
