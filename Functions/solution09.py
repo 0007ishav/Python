@@ -1,9 +1,6 @@
-items = ["apple", "banana", "orange", "apple", "mango"]
+def even_generator(limit):
+   for i in range(2, limit + 1, 2):
+        yield i
 
-unique_item = set()
-
-for item in items:
-    if item in unique_item:
-        print("Duplicate: ", item)
-        break
-    unique_item.add(item)
+for num in even_generator(10):
+    print(num)
