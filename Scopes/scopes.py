@@ -33,5 +33,16 @@ def f1():
     x = 77
     def f2():
         print(x)
-    f2()
-f1()
+    return f2
+myResult = f1()
+myResult()
+
+def chaicoder(num):
+    def actual(x):
+        return x ** num
+    return actual
+
+f = chaicoder(2)   # f is storing the actual named function with num reference i.e closure.
+g = chaicoder(3)
+
+print(f(2))
