@@ -85,6 +85,36 @@
 
 # Solution 6
 
+# class Car:
+#     total_car = 0
+#     def __init__(self, brand, model):
+#         self.__brand = brand
+#         self.model = model
+#         Car.total_car += 1
+
+
+#     def get_brand(self):
+#         return self.__brand + " !"
+
+#     def full_name(self):
+#         return f"{self.__brand} {self.model}"
+    
+#     def fuel_type(self):
+#         return "Petrol or Diesel"
+    
+# safari = Car("Tata", "Safari")
+# print(safari.total_car)
+    
+# These two are not okay to get access of total car variable.
+    
+# test = Car("test", "test")
+# print(test.total_car)
+    
+# print(Car.total_car)   # we can directly access the variables.
+# Sometimes garbage collector dont clean immediately for optimisation purpose.
+
+# Solution 7
+
 class Car:
     total_car = 0
     def __init__(self, brand, model):
@@ -102,13 +132,11 @@ class Car:
     def fuel_type(self):
         return "Petrol or Diesel"
     
-# safari = Car("Tata", "Safari")
-# print(safari.total_car)
+    @staticmethod
+    def general_description():
+        return "Cars are means of transport."
     
-# These two are not okay to get access of total car variable.
-    
-# test = Car("test", "test")
-# print(test.total_car)
-    
-print(Car.total_car)   # we can directly access the variables.
-# Sometimes garbage collector dont clean immediately for optimisation purpose.
+my_car = Car("Tata", "Safari")
+
+# print(my_car.general_description())
+print(Car.general_description())
